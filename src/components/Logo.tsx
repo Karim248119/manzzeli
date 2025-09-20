@@ -1,4 +1,3 @@
-import { Fonts } from "@/lib/fonts";
 import React from "react";
 import Typo from "./Typo";
 

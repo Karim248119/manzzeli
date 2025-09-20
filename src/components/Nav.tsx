@@ -9,8 +9,8 @@ const NavLinks = [
     href: "/",
   },
   {
-    name: "rooms",
-    href: "/rooms",
+    name: "floors",
+    href: "/floors",
   },
   {
     name: "kitchens",
@@ -21,8 +21,8 @@ const NavLinks = [
     href: "/bathrooms",
   },
   {
-    name: "outdoors",
-    href: "/outdoors",
+    name: "doors",
+    href: "/doors",
   },
 ];
 
@@ -84,6 +84,7 @@ export default function Nav() {
                 className="w-full h-full shrink-0 flex items-center px-20 border-b group z-20"
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(-0.1)}
+                onClick={() => setIsOpen(false)}
               >
                 <div
                   className={`uppercase font-semibold shrink-0 text-6xl duration-500 group-hover:text-white z-10`}

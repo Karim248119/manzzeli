@@ -1,6 +1,6 @@
 const COLLECTIONS = [
   {
-    title: "rooms",
+    title: "Floors",
     img: "https://www.duchateau.com/_vercel/image?url=https:%2F%2Fimages.prismic.io%2Fduchateau%2FZvKYNrVsGrYSv0q8_home-category4-min.jpeg?auto=format,compress&w=2559&q=100",
   },
   {
@@ -12,8 +12,8 @@ const COLLECTIONS = [
     img: "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
   },
   {
-    title: "outdoors",
-    img: "https://images.pexels.com/photos/24807126/pexels-photo-24807126.jpeg",
+    title: "Doors",
+    img: "https://images.pexels.com/photos/7533844/pexels-photo-7533844.jpeg",
   },
 ];
 
