@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import Nav from "@/components/Nav";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,8 +33,7 @@ export default function RootLayout({
       >
         <LenisProvider />
         <Nav />
-
-        {children}
+        <Suspense fallback={<Loader />}>{children}</Suspense>
       </body>
     </html>
   );
