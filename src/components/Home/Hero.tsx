@@ -1,4 +1,3 @@
-import { images } from "@/lib/Images";
 import Image from "next/image";
 import React from "react";
 import Typo from "../Typo";

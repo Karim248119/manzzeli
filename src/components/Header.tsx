@@ -1,13 +1,7 @@
 import React from "react";
 import ParallexImg from "./ParallexImg";
 import Typo from "./Typo";
-import {
-  PiCircleHalfTiltThin,
-  PiCompassRoseThin,
-  PiFarmThin,
-  PiFlowerLotusThin,
-  PiTidalLogoThin,
-} from "react-icons/pi";
+import { PiTidalLogoThin } from "react-icons/pi";
 
 export default function Header({
   title,

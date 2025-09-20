@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ParallexImg from "@/components/ParallexImg";
 import React from "react";
 import DoorItems from "@/data/doors";
 import Typo from "@/components/Typo";
