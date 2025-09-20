@@ -24,8 +24,8 @@ export default function page() {
       </div>
       <ImgLink
         src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg"
-        link="/rooms"
-        linkText="Discover our rooms"
+        link="/floors"
+        linkText="Discover our floors"
       />
     </div>
   );
