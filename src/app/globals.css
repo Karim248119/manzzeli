@@ -8,6 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #f0efe9;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -23,4 +24,76 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  /* overflow: hidden; */
 }
+
+button {
+  cursor: pointer;
+}
+
+/* noise */
+/* body::after {
+  content: "";
+  position: absolute;
+  top: -12.5%;
+  left: -12.5%;
+  z-index: -1;
+  width: 125%;
+  height: 125%;
+  background: url(https://user-images.githubusercontent.com/22321142/100630839-55bd1f00-332b-11eb-9e4c-5989758da284.png)
+    repeat center center;
+  opacity: 0.75;
+  animation: noiseMovement 0.09s steps(6) infinite;
+}
+
+@keyframes noiseMovement {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(0%, -10%);
+  }
+  30% {
+    transform: translate(-10%, 5%);
+  }
+  50% {
+    transform: translate(0%, 10%);
+  }
+  70% {
+    transform: translate(10%, -5%);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+}
+
+h1,
+h2 {
+  font-family: "VT323";
+  font-weight: normal;
+  color: var(--text-color);
+  margin: 0;
+}
+
+h1 {
+  font-size: 6vw;
+}
+h2 {
+  font-size: 3vw;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); */
