@@ -27,8 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressHydrationWarning
-        style={{ scrollBehavior: "smooth" }}
         className={`${geistSans.variable} ${geistMono.variable} bg-white antialiased`}
       >
         <LenisProvider />
