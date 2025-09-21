@@ -5,16 +5,19 @@ import Image from "next/image";
 
 export default function Team() {
   return (
-    <div className="w-full min-h-screen bg-black p-10 py-20 ">
-      <Typo font="serif" className="text-9xl mb-20 text-white text-end">
+    <div className="w-full min-h-screen bg-black md:px-10 px-5 py-20 ">
+      <Typo
+        font="serif"
+        className="md:text-9xl text-4xl md:mb-20 mb-10 text-white text-end"
+      >
         Our Team
       </Typo>
       {TeamItems.map((item, index) => (
         <button
           key={index}
-          className="w-full flex items-center justify-between h-10 group"
+          className="w-full flex items-center justify-between gap-5 h-10 group"
         >
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <Image
               width={300}
               height={300}
@@ -23,11 +26,11 @@ export default function Team() {
               alt=""
             />
           </div>
-          <div className="w-1/2 flex justify-between">
-            <h1 className="font-bold text-2xl text-neutral-600 group-hover:text-white">
+          <div className="flex-1 flex justify-between">
+            <h1 className="font-bold md:text-2xl text-sm text-neutral-600 group-hover:text-white">
               {item.name}
             </h1>
-            <p className="text-white font-semibold opacity-0 group-hover:opacity-100">
+            <p className="text-white md:text-base text-[8px] md:font-semibold md:opacity-0 group-hover:opacity-100">
               {item.role}
             </p>
           </div>

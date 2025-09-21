@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <div className={className}>
-      <ParallexImg className={`w-full ${imgClassName}`} src={src} />
+      <ParallexImg className={`w-full  ${imgClassName}`} src={src} />
       <Typo hidden font="serif" className="text-xl mt-2 capitalize">
         {title}
       </Typo>

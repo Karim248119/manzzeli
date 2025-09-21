@@ -71,12 +71,12 @@ export default function VerticalSlider() {
       style={{ height: `${COLLECTIONS.length * scrollStepVH}vh` }}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <div className="absolute bottom-20 right-20 flex flex-col gap-1 z-50">
+        <div className="absolute bottom-20 md:right-20 right-5 flex flex-col gap-1 z-50">
           {COLLECTIONS.map((slide, idx) => (
             <button
               key={idx}
               onClick={() => goToIndex(idx)}
-              className={`cursor-pointer text-sm font-semibold uppercase transition-colors ${
+              className={`cursor-pointer md:text-sm text-xs font-semibold uppercase transition-colors ${
                 idx === activeIndex ? "text-white" : "text-white/50"
               }`}
             >
@@ -84,7 +84,9 @@ export default function VerticalSlider() {
             </button>
           ))}
           <Link href={`/${COLLECTIONS[activeIndex].title}`}>
-            <Button className="-ml-4 mt-10">Show All Products</Button>
+            <Button className="md:-ml-4 md:mt-10 mt-4">
+              Show All Products
+            </Button>
           </Link>
         </div>
 
@@ -125,7 +127,7 @@ export default function VerticalSlider() {
               >
                 <div className="w-full h-full absolute top-0 left-0 bg-black/50" />
                 <p
-                  className={`ml-20 text-[12vw] relative z-10 text-white capitalize overflow-hidden duration-1000 ${
+                  className={`md:ml-20 ml-5 md:text-[12vw] text-[15vw] relative z-10 text-white capitalize overflow-hidden duration-1000 ${
                     idx === activeIndex
                       ? "opacity-100 h-[30vh]"
                       : "opacity-0 h-0"

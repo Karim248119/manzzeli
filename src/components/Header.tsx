@@ -15,21 +15,24 @@ export default function Header({
   img: string;
 }) {
   return (
-    <div className="w-full h-screen grid grid-cols-2 text-black">
-      <div className="w-full h-full flex flex-col justify-center items-center gap-1 px-20">
-        <Typo font="serif" className="text-9xl px-20  mb-5">
+    <div className="w-full min-h-screen grid md:grid-cols-2 md:grid-rows-1 grid-rows-2 text-black">
+      <div className="w-full h-full flex flex-col justify-center items-center gap-1 md:px-20 px-5">
+        <Typo
+          font="serif"
+          className="md:text-9xl text-4xl md:px-20 px-5 md:mb-5 mb-2"
+        >
           {title}
-          <PiTidalLogoThin className="text-4xl mx-auto" />
+          <PiTidalLogoThin className="md:text-4xl text-2xl mx-auto" />
         </Typo>
 
-        <Typo font="base" className="text-center">
+        <Typo font="base" className="text-center md:text-base text-xs">
           {des}
         </Typo>
-        <Typo className="text-center text-lg font-serif mt-16 w-40">
+        <Typo className="text-center md:text-lg text-sm font-serif md:mt-16 mt-5 md:w-40">
           {subtitle}
         </Typo>
       </div>
-      <ParallexImg src={img} className="h-screen w-full" />
+      <ParallexImg src={img} className="md:!h-screen !h-[50vh] w-full" />
     </div>
   );
 }

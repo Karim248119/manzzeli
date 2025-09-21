@@ -28,10 +28,9 @@ const NavLinks = [
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredIndex, setHoveredIndex] = useState(-0.1);
   return (
     <div>
-      <div className="fixed z-50 mix-blend-difference w-full h-20 flex items-center justify-between px-20">
+      <div className="fixed z-50 mix-blend-difference w-full h-20 flex items-center justify-between md:px-20 px-5">
         <Link href="/">
           <div className="text-white">
             <Logo />
@@ -39,15 +38,15 @@ export default function Nav() {
         </Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-4 relative"
+          className="md:w-12 md:h-4 w-8 h-2 relative"
         >
           <div
-            className={`w-full h-[1.5px] absolute left-0 bg-white duration-500 ${
+            className={`w-full md:h-[1.5px] h-[1px] absolute left-0 bg-white duration-500 ${
               isOpen ? "top-1/2 -translate-y-1/2" : "top-0"
             }`}
           />
           <div
-            className={`w-full h-[1.5px] absolute left-0 bg-white duration-500 ${
+            className={`w-full md:h-[1.5px] h-[1px] absolute left-0 bg-white duration-500 ${
               isOpen ? "bottom-1/2 translate-y-1/2" : "bottom-0"
             }`}
           />
@@ -64,33 +63,34 @@ export default function Nav() {
         }}
       >
         <div
-          className={`w-[50%] ml-[50%] bg-white  overflow-hidden relative  duration-500 ${
+          className={`md:w-[50%] md:ml-[50%] w-full bg-white  overflow-hidden relative  duration-500 ${
             isOpen ? "h-screen" : "h-0"
           }`}
         >
           <div className="absolute top-0 pt-[10vh] right-0 w-full h-screen  grid grid-rows-5">
             {/* sliding background */}
-            <div
+            {/* <div
               className={`w-full h-[18vh] bg-black absolute left-0 duration-300 `}
               style={{
                 top: `${hoveredIndex * 18 + 10}vh`,
                 opacity: hoveredIndex < 0 ? 0 : 1,
               }}
-            />
+            /> */}
             {NavLinks.map((link, i) => (
               <Link
                 href={link.href}
                 key={i}
-                className="w-full h-full shrink-0 flex items-center px-20 border-b group z-20"
-                onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(-0.1)}
+                className="w-full h-full flex justify-between items-center md:px-[5.8rem] px-5 border-b group z-20 relative"
                 onClick={() => setIsOpen(false)}
               >
+                <div className="w-0 group-hover:w-full h-full absolute top-0 right-0 bg-black duration-500" />
+
                 <div
-                  className={`uppercase font-semibold shrink-0 text-6xl duration-500 group-hover:text-white z-10`}
+                  className={`uppercase font-semibold shrink-0 md:text-6xl text-4xl duration-500 group-hover:text-white z-10`}
                 >
                   {link.name}
                 </div>
+                <div className="md:w-6 w-4 aspect-square rounded-full border-2 md:group-hover:w-5 group-hover:w-3 group-hover:bg-white duration-500 relative z-10" />
               </Link>
             ))}
           </div>

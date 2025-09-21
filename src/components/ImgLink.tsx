@@ -26,7 +26,10 @@ export default function ImgLink({
           href={link}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
         >
-          <Typo font="serif" className="text-3xl px-20  mb-5 text-white">
+          <Typo
+            font="serif"
+            className="md:text-3xl text-xl md:px-20 px-5 text-center mb-5 text-white"
+          >
             {linkText}
             <div className="mx-auto bg-amber-300 relative">
               <PiTidalLogoThin className="absolute left-1/2 -translate-x-1/2 top-0 opacity-100 group-hover:opacity-0 duration-500" />

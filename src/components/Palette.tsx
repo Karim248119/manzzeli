@@ -78,19 +78,14 @@ export default function Palette() {
 
           <div className="w-full h-[25vh] bg-primary z-10 flex justify-center items-center gap-20">
             {PalleteItems.map((item, index) => (
-              <div key={item.title} className="flex items-center gap-1">
-                <div className="relative w-4 h-4">
-                  <PiCircleHalfTiltLight
-                    className={`absolute bottom-0 left-0 duration-200 ${
-                      index === activeIndex ? "opacity-100" : "opacity-0"
-                    }`}
-                  />
-                  <PiCircleLight
-                    className={`absolute top-0 left-0 duration-200 ${
-                      index === activeIndex ? "opacity-0" : "opacity-100"
-                    }`}
-                  />
-                </div>
+              <div key={item.title} className="flex items-center gap-2">
+                <div
+                  className={`relative aspect-square rounded-full border duration-500
+                    
+                    ${activeIndex === index ? "w-3 bg-black" : "w-4"}
+                    
+                    `}
+                ></div>
                 <Typo fixed font="base" className="text-xl">
                   {item.title}
                 </Typo>

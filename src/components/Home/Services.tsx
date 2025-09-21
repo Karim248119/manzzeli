@@ -21,11 +21,11 @@ const SERVICES = [
 ];
 export default function Services() {
   return (
-    <div className="w-full py-10 px-20 bg-primary">
-      <Typo font="serif" className="text-9xl pb-10">
+    <div className="w-full py-10 md:px-20 px-5 bg-primary">
+      <Typo font="serif" className="md:text-9xl text-4xl pb-10">
         Design Services
       </Typo>
-      <div className="w-full grid grid-cols-3 gap-3">
+      <div className="w-full grid md:grid-cols-3 md:grid-rows-1 grid-rows-3 md:gap-3 gap-10">
         {SERVICES.map((item, index) => (
           <Card
             key={index}

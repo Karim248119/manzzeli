@@ -14,6 +14,7 @@ export default function SplideCarousel({
   dir?: "rtl" | "ltr";
   showText?: boolean;
 }) {
+  const isMobile = window.innerWidth < 768;
   return (
     <div className="w-full min-h-screen py-20">
       {showText && (
@@ -31,7 +32,7 @@ export default function SplideCarousel({
           focus: "center",
           arrows: false,
           pagination: false,
-          perPage: 3,
+          perPage: isMobile ? 1 : 3,
           gap: "1rem",
           autoScroll: {
             speed: 1, // control scroll speed
@@ -43,7 +44,10 @@ export default function SplideCarousel({
         className="w-full"
       >
         {slides.map((src, i) => (
-          <SplideSlide key={i} className="w-[30vw] h-[50vh] relative ">
+          <SplideSlide
+            key={i}
+            className="md:w-[30vw] w-[90vw] h-[50vh] relative "
+          >
             <Image
               width={1000}
               height={1000}

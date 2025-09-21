@@ -14,11 +14,14 @@ interface SlideProps {
 const Silde = ({ img, title, subtitles, des, bg, text }: SlideProps) => {
   return (
     <div
-      className="sticky top-0 left-0  w-full h-screen grid grid-cols-4 items-center justify-between gap-10 py-10 pr-20"
+      className="sticky top-0 left-0  w-full h-screen grid md:grid-cols-4 items-center justify-between md:gap-10 gap-5 py-10 md:pr-20"
       style={{ background: bg, color: text }}
     >
-      <div className="col-span-2 w-full h-full ">
-        <Typo fixed className="text-8xl uppercase font-semibold ml-2">
+      <div className="col-span-2 w-full md:h-full ">
+        <Typo
+          fixed
+          className="md:text-8xl text-3xl uppercase font-semibold ml-2"
+        >
           {title}
         </Typo>
         <Image
@@ -26,15 +29,13 @@ const Silde = ({ img, title, subtitles, des, bg, text }: SlideProps) => {
           height={1000}
           alt=""
           src={img}
-          className=" w-full !h-[50vh] object-cover"
+          className=" w-full md:!h-[50vh] !h-[30vh] object-cover"
         />
       </div>
-      <div>
-        <Typo fixed font="base">
-          {des}
-        </Typo>
-      </div>
-      <div className="space-y-4 w-2/3 justify-self-end">
+      <Typo fixed font="base" className="md:text-base text-xs pl-5">
+        {des}
+      </Typo>
+      <div className="space-y-4 md:w-2/3 justify-self-end md:text-base text-xs pr-5">
         <div className="w-full h-[1px] bg-current" />
         {subtitles.map((subtitle) => (
           <Typo fixed font="serif" key={subtitle} className="flex">

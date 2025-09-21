@@ -11,7 +11,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      className={`w-fit pr-10 pl-4 py-2 text-sm group border overflow-hidden rounded-full flex justify-center items-center relative mt-3 capitalize ${className} 
+      className={`w-fit md:pr-10 pr-6 md:pl-4 pl-3 md:py-2 py-1 group border overflow-hidden rounded-full flex justify-center items-center relative mt-3 capitalize ${className} 
         ${dark ? "text-black border-black/50" : "text-white border-white/50"}
       `}
     >
@@ -25,7 +25,7 @@ export const Button = ({
       {/* text */}
       <Typo
         fixed
-        className={`duration-500 font-[500] relative z-10
+        className={`duration-500 font-[500] md:text-sm text-xs relative z-10
           ${dark ? "group-hover:text-white" : "group-hover:text-black"}
         `}
       >
@@ -34,7 +34,7 @@ export const Button = ({
 
       {/* circle */}
       <div
-        className={`w-4 aspect-square rounded-full border flex absolute right-3 duration-300 origin-center  z-10
+        className={`md:w-4 w-3 aspect-square rounded-full border flex absolute md:right-3 right-2 duration-300 origin-center  z-10
           ${
             dark
               ? "border-black/50 group-hover:scale-50 group-hover:border-none group-hover:bg-white"

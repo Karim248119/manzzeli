@@ -17,7 +17,7 @@ export default function Hero() {
       <Typo
         font="logo"
         hidden
-        className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-[18vw] text-white font-bold "
+        className="absolute md:-bottom-10 bottom-2 left-1/2 -translate-x-1/2 text-[18vw] text-white font-bold "
       >
         Manzzeli
       </Typo>
