@@ -4,6 +4,7 @@ import "@splidejs/react-splide/css"; // base styles
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import Image from "next/image";
 import Typo from "./Typo";
+import { use, useEffect, useState } from "react";
 
 export default function SplideCarousel({
   slides,
@@ -14,7 +15,17 @@ export default function SplideCarousel({
   dir?: "rtl" | "ltr";
   showText?: boolean;
 }) {
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="w-full min-h-screen py-20">
       {showText && (
