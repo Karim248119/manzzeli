@@ -62,7 +62,7 @@ export default function Palette() {
 
         <div className="sticky top-0 left-0 w-full h-[100vh] z-10 flex flex-col justify-center items-center">
           <div className="w-full h-[25vh] bg-primary z-10 flex justify-center items-center">
-            <Typo fixed font="serif" className="text-8xl">
+            <Typo fixed font="serif" className="md:text-8xl text-4xl">
               Explore our palette
             </Typo>
           </div>
@@ -71,22 +71,25 @@ export default function Palette() {
             {[100, 200, 300, 400].map((item) => (
               <div
                 key={item}
-                className="w-full h-[50vh] p-5 ring-32 ring-primary ring-inset border"
+                className="w-full h-[50vh] p-5 md:ring-32 ring-10 ring-primary ring-inset border"
               />
             ))}
           </div>
 
-          <div className="w-full h-[25vh] bg-primary z-10 flex justify-center items-center gap-20">
+          <div className="w-full h-[25vh] bg-primary z-10 flex md:flex-row flex-col justify-center items-center md:gap-20 gap-3 ">
             {PalleteItems.map((item, index) => (
-              <div key={item.title} className="flex items-center gap-2">
+              <div
+                key={item.title}
+                className="flex items-center md:gap-2 gap-1 w-1/2 md:w-auto -mr-10 md:mr-0"
+              >
                 <div
-                  className={`relative aspect-square rounded-full border duration-500
+                  className={`relative md:w-4 w-3 aspect-square rounded-full border duration-500
                     
-                    ${activeIndex === index ? "w-3 bg-black" : "w-4"}
+                    ${activeIndex === index && "scale-90 bg-black"}
                     
                     `}
                 ></div>
-                <Typo fixed font="base" className="text-xl">
+                <Typo fixed font="base" className="md:text-xl text-xs">
                   {item.title}
                 </Typo>
               </div>

@@ -18,7 +18,10 @@ export default function SplideCarousel({
   return (
     <div className="w-full min-h-screen py-20">
       {showText && (
-        <Typo font="serif" className="text-2xl px-10 mb-20 w-1/2">
+        <Typo
+          font="serif"
+          className="md:text-2xl  md:px-10 px-5 mb-20 md:w-1/2"
+        >
           A seamless process from concept to completion, we work with designers
           and architects to support their vision, cultivating the experience and
           results they deserve.
@@ -53,7 +56,7 @@ export default function SplideCarousel({
               height={1000}
               src={src}
               alt={`item ${i}`}
-              className="w-[30vw] h-[50vh] object-cover cursor-grab absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hover:w-[26vw] hover:h-[48vh] duration-700"
+              className="md:w-[30vw] w-[90vw] h-[50vh] object-cover cursor-grab absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hover:w-[26vw] hover:h-[48vh] duration-700"
             />
           </SplideSlide>
         ))}
