@@ -4,6 +4,8 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Button } from "./Button";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -11,18 +13,22 @@ const COLLECTIONS = [
   {
     title: "floors",
     img: "https://images.pexels.com/photos/210547/pexels-photo-210547.jpeg",
+    link: "/floors",
   },
   {
     title: "kitchens",
     img: "https://images.pexels.com/photos/3847592/pexels-photo-3847592.jpeg",
+    link: "/kitchens",
   },
   {
     title: "bathrooms",
     img: "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
+    link: "/bathrooms",
   },
   {
     title: "doors",
     img: "https://images.pexels.com/photos/7533844/pexels-photo-7533844.jpeg",
+    link: "/doors",
   },
 ];
 
@@ -123,6 +129,9 @@ export default function VerticalSlider() {
                 >
                   {slide.title}
                 </p>
+                <Link href={slide.link}>
+                  <Button className="md:mt-10 mt-5">View Collection</Button>
+                </Link>
               </div>
             </div>
           </div>

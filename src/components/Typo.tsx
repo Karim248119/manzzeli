@@ -36,14 +36,14 @@ export default function Typo({
         gsap.fromTo(
           el,
           { y: 100, opacity: 1 },
-          { y: 0, opacity: 1, duration, ease: "power2.out" }
+          { y: 0, opacity: 1, duration, ease: "power2.out" },
         );
       },
       onEnterBack: () => {
         gsap.fromTo(
           el,
           { y: -100, opacity: 1 },
-          { y: 0, opacity: 1, duration, ease: "power2.out" }
+          { y: 0, opacity: 1, duration, ease: "power2.out" },
         );
       },
     });
@@ -58,12 +58,12 @@ export default function Typo({
           font === "main"
             ? Fonts.main.className
             : font === "logo"
-            ? Fonts.logo.className
-            : font === "serif"
-            ? Fonts.serif.className
-            : font === "base"
-            ? Fonts.quicksand.className
-            : ""
+              ? Fonts.logo.className
+              : font === "serif"
+                ? Fonts.serif.className
+                : font === "base"
+                  ? Fonts.quicksand.className
+                  : ""
         } ${className}`}
       >
         {children}

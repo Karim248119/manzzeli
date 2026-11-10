@@ -26,7 +26,7 @@ const InspirationContent = [
 
 export default function Inspiration() {
   return (
-    <div className="w-full  md:p-20 py-10 px-5">
+    <div className="w-full  md:p-20 py-10 px-5 bg-primary text-black">
       <Typo
         className="text-center mx-auto md:leading-15 md:text-5xl"
         font="serif"
