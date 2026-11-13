@@ -12,8 +12,8 @@ export default function page() {
     <div>
       <div className="bg-white relative z-10">
         <Header
+          img="https://images.pexels.com/photos/7533836/pexels-photo-7533836.jpeg"
           title="Doors"
-          img="https://www.duchateau.com/_vercel/image?url=https:%2F%2Fimages.prismic.io%2Fduchateau%2FZ75Wlp7c43Q3gOy0_AtelierGoldenHour.jpg?auto=format,compress%26rect=0,36,1500,1927%26w=1320%26h=1696&w=767&q=100"
           des="Whether you're looking for the natural beauty of hardwood or the durability for lifestyle of luxury vinyl plank, your foundation is waiting for you in our designer-curated collections."
           subtitle="Availble only in our showroom"
         />

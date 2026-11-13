@@ -21,7 +21,7 @@ const SERVICES = [
 ];
 export default function Services() {
   return (
-    <div className="w-full py-10 md:px-20 px-5 bg-primary">
+    <div className="w-full py-10 md:px-20 px-5 bg-primary text-black">
       <Typo font="serif" className="md:text-9xl text-4xl pb-10">
         Design Services
       </Typo>

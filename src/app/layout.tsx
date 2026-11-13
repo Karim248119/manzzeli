@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <LenisProvider />
         <Nav />
-        <Suspense fallback={<Loader />}>{children}</Suspense>
+        {children}
       </body>
     </html>
   );

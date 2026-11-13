@@ -86,7 +86,7 @@ export default function Nav() {
                 <div className="w-0 group-hover:w-full h-full absolute top-0 right-0 bg-black duration-500" />
 
                 <div
-                  className={`uppercase font-semibold shrink-0 md:text-6xl text-4xl duration-500 group-hover:text-white z-10`}
+                  className={`uppercase font-semibold shrink-0 md:text-6xl text-4xl duration-500 text-black group-hover:text-white z-10`}
                 >
                   {link.name}
                 </div>

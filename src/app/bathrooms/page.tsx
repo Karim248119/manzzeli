@@ -23,7 +23,7 @@ export default function page() {
         <Footer />
       </div>
       <ImgLink
-        src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg"
+        src="https://images.pexels.com/photos/5353892/pexels-photo-5353892.jpeg"
         link="/floors"
         linkText="Discover our floors"
       />
