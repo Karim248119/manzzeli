@@ -54,7 +54,7 @@ export default function Footer() {
         <Button dark>Subscribe and keep informed</Button>
       </div>
 
-      <div className="w-full h-full flex items-center justify-center overflow-hidden border-t ">
+      <div className="w-full h-full flex items-center justify-center overflow-hidden border-t py-10">
         <MultiPathAnimatedIcon size={1400} paths={logo} color="#000" />
       </div>
     </div>

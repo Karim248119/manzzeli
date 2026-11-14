@@ -18,7 +18,7 @@ export default function Hero() {
       <MultiPathAnimatedIcon
         size={1400}
         paths={logo}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 animate-delayed-fade opacity-0"
       />
     </div>
   );
