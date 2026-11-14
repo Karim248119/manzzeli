@@ -26,9 +26,9 @@ export default function page() {
         <Footer />
       </div>
       <ImgLink
-        src="https://images.pexels.com/photos/7533836/pexels-photo-7533836.jpeg"
-        link="/doors"
-        linkText="Discover our Doors"
+        src="https://images.pexels.com/photos/3847592/pexels-photo-3847592.jpeg"
+        link="/kitchens"
+        linkText="Discover our Kitchens"
       />
     </div>
   );

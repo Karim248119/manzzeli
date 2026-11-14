@@ -10,7 +10,7 @@ import React from "react";
 export default function page() {
   return (
     <div>
-      <div className="bg-white relative z-10">
+      <div className="bg-white text-black relative z-10">
         <Header
           title="Baths"
           img="https://images.pexels.com/photos/10919427/pexels-photo-10919427.jpeg"
@@ -23,9 +23,9 @@ export default function page() {
         <Footer />
       </div>
       <ImgLink
-        src="https://images.pexels.com/photos/5353892/pexels-photo-5353892.jpeg"
-        link="/floors"
-        linkText="Discover our floors"
+        src="https://images.pexels.com/photos/7533836/pexels-photo-7533836.jpeg"
+        link="/doors"
+        linkText="Discover our doors"
       />
     </div>
   );

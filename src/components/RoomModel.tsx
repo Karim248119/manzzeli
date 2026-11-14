@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import gsap from "gsap";
@@ -32,25 +32,33 @@ function CameraScrollRotation() {
 export default function RoomModel({ file }: { file: string }) {
   const [enableOrbitControls, setEnableOrbitControls] = React.useState(false);
   return (
-    <div
-      className="w-full scroll-area duration-500 relative"
-      style={{
-        height: enableOrbitControls ? "300vh" : "300vh",
-        cursor: enableOrbitControls ? "move" : "auto",
-      }}
+    <Suspense
+      fallback={
+        <div className="w-full h-screen flex items-center justify-center">
+          Loading Model...
+        </div>
+      }
     >
-      <button
-        className="absolute bottom-0 right-0 text-4xl bg-black text-white p-2 z-10"
-        onClick={() => setEnableOrbitControls(!enableOrbitControls)}
+      <div
+        className="w-full scroll-area duration-500 relative"
+        style={{
+          height: enableOrbitControls ? "300vh" : "300vh",
+          cursor: enableOrbitControls ? "move" : "auto",
+        }}
       >
-        {enableOrbitControls ? <PiMouseScroll /> : <LuRotate3D />}
-      </button>
-      <div className="w-full h-screen sticky top-0 left-0">
-        <Canvas>
-          <Environment background files={file} />
-          {enableOrbitControls ? <OrbitControls /> : <CameraScrollRotation />}
-        </Canvas>
+        <button
+          className="absolute bottom-0 right-0 text-4xl bg-black text-white p-2 z-10"
+          onClick={() => setEnableOrbitControls(!enableOrbitControls)}
+        >
+          {enableOrbitControls ? <PiMouseScroll /> : <LuRotate3D />}
+        </button>
+        <div className="w-full h-screen sticky top-0 left-0">
+          <Canvas>
+            <Environment background files={file} />
+            {enableOrbitControls ? <OrbitControls /> : <CameraScrollRotation />}
+          </Canvas>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }

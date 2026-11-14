@@ -1,6 +1,8 @@
 import React from "react";
 import Typo from "./Typo";
 import { Button } from "./Button";
+import { logo } from "@/lib/paths";
+import MultiPathAnimatedIcon from "./AnimatedIcon";
 
 const FooterContent = [
   {
@@ -23,7 +25,7 @@ const FooterContent = [
 
 export default function Footer() {
   return (
-    <div className="w-full h-screen bg-primary text-black grid md:grid-rows-2 grid-rows-3">
+    <div className="w-full min-h-screen bg-primary text-black grid md:grid-rows-2 grid-rows-3">
       <div className="w-full h-full flex flex-col justify-between md:px-20 px-5 py-14 row-span-2">
         <div className="w-full grid md:grid-cols-4 md:grid-rows-1 grid-cols-2 grid-rows-2 gap-y-5">
           {FooterContent.map((item) => (
@@ -53,9 +55,7 @@ export default function Footer() {
       </div>
 
       <div className="w-full h-full flex items-center justify-center overflow-hidden border-t ">
-        <Typo font="logo" fixed className="text-[18vw] mx-auto">
-          MANZELLI
-        </Typo>
+        <MultiPathAnimatedIcon size={1400} paths={logo} color="#000" />
       </div>
     </div>
   );
