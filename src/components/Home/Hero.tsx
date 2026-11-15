@@ -1,7 +1,4 @@
 import Image from "next/image";
-import React from "react";
-import Typo from "../Typo";
-import Logo from "../AnimatedLogo";
 import MultiPathAnimatedIcon from "../AnimatedIcon";
 import { logo } from "@/lib/paths";
 
@@ -18,7 +15,8 @@ export default function Hero() {
       <MultiPathAnimatedIcon
         size={1400}
         paths={logo}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 animate-delayed-fade opacity-0"
+        duration={4}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-delayed-fade opacity-0"
       />
     </div>
   );

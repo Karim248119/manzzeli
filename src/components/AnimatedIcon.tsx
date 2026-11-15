@@ -7,6 +7,7 @@ interface MultiPathAnimatedIconProps {
   color?: string;
   size?: number;
   className?: string;
+  duration?: number;
 }
 
 export default function MultiPathAnimatedIcon({
@@ -14,13 +15,11 @@ export default function MultiPathAnimatedIcon({
   color = "#fff",
   size = 200,
   className = "",
+  duration = 3,
 }: MultiPathAnimatedIconProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
-
-  const duration = 4;
-  const delay = 0.5;
 
   useEffect(() => {
     if (isInView) controls.start("visible");
@@ -35,8 +34,8 @@ export default function MultiPathAnimatedIcon({
       pathLength: 1,
       fill: color,
       transition: {
-        pathLength: { delay: delay, duration, ease: [0.42, 0, 0.58, 1] },
-        fill: { delay: duration * 0.5, duration: duration * 0.2 },
+        pathLength: { duration, ease: [0.42, 0, 0.58, 1] },
+        fill: { delay: duration * 0.4, duration: duration * 0.2 },
       },
     },
   };

@@ -40,9 +40,8 @@ export default function RoomModel({ file }: { file: string }) {
       }
     >
       <div
-        className="w-full scroll-area duration-500 relative"
+        className="w-full scroll-area duration-500 relative h-[500vh] "
         style={{
-          height: enableOrbitControls ? "300vh" : "300vh",
           cursor: enableOrbitControls ? "move" : "auto",
         }}
       >

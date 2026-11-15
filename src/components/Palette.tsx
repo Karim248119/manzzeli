@@ -3,7 +3,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Typo from "./Typo";
 import { PalleteItems } from "@/data/floor";
 import Image from "next/image";
-import { PiCircle, PiCircleHalfTiltLight, PiCircleLight } from "react-icons/pi";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -27,7 +26,7 @@ export default function Palette() {
         // progress: 0 → 1 across the container
         const progress = self.progress;
         // Map progress to number of 50vh sections
-        const newIndex = Math.floor(progress * totalSections);
+        const newIndex = Math.floor(progress * totalSections * 2);
         setActiveIndex(newIndex);
       },
     });
@@ -68,12 +67,14 @@ export default function Palette() {
           </div>
 
           <div className="w-full h-[50vh] grid grid-cols-4">
-            {[100, 200, 300, 400].map((item) => (
-              <div
-                key={item}
-                className="w-full h-[50vh] p-5 md:ring-32 ring-10 ring-primary ring-inset border"
-              />
-            ))}
+            {Array(4)
+              .fill(null)
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className="w-full h-[50vh] p-5 md:ring-32 ring-10 ring-primary ring-inset border"
+                />
+              ))}
           </div>
 
           <div className="w-full h-[25vh] bg-primary z-10 flex md:flex-row flex-col justify-center items-center md:gap-20 gap-3 ">

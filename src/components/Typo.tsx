@@ -10,7 +10,7 @@ export default function Typo({
   children,
   className,
   fixed,
-  duration = 1.5,
+  duration = 1,
   hidden = false,
   font,
 }: {
@@ -35,14 +35,14 @@ export default function Typo({
       onEnter: () => {
         gsap.fromTo(
           el,
-          { y: 100, opacity: 1 },
+          { y: 50, opacity: 1 },
           { y: 0, opacity: 1, duration, ease: "power2.out" },
         );
       },
       onEnterBack: () => {
         gsap.fromTo(
           el,
-          { y: -100, opacity: 1 },
+          { y: -50, opacity: 1 },
           { y: 0, opacity: 1, duration, ease: "power2.out" },
         );
       },

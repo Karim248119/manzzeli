@@ -4,7 +4,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { Button } from "./Button";
+import { Button } from "../Button";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -81,7 +81,7 @@ export default function VerticalSlider() {
       style={{ height: `${COLLECTIONS.length * 100}vh` }}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-zinc-900">
-        <div className="absolute bottom-20 md:right-20 right-5 flex flex-col gap-1 z-[100]">
+        <div className=" w-full absolute bottom-10 left-0 px-10 flex justify-center items-center gap-10 z-[100]">
           {COLLECTIONS.map((slide, idx) => (
             <button
               key={idx}
@@ -119,8 +119,8 @@ export default function VerticalSlider() {
               />
               <div className="absolute inset-0 bg-black/40" />
 
-              <div className="relative z-10 md:ml-20 ml-5 overflow-hidden">
-                <p
+              <div className="relative w-full flex justify-between items-center z-10 md:px-18 px-5 overflow-hidden">
+                <div
                   className={`md:text-[12vw] text-[15vw] leading-none text-white capitalize transition-all duration-700 ease-out ${
                     idx === activeIndex
                       ? "opacity-100 translate-y-0"
@@ -128,8 +128,15 @@ export default function VerticalSlider() {
                   }`}
                 >
                   {slide.title}
-                </p>
-                <Link href={slide.link}>
+                </div>
+                <Link
+                  href={slide.link}
+                  // className={`${
+                  //   idx === activeIndex
+                  //     ? "opacity-100 translate-y-0"
+                  //     : "opacity-0 translate-y-20"
+                  // } transition-all duration-700 ease-out`}
+                >
                   <Button className="md:mt-10 mt-5">View Collection</Button>
                 </Link>
               </div>
