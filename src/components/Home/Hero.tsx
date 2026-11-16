@@ -1,5 +1,5 @@
 import Image from "next/image";
-import MultiPathAnimatedIcon from "../AnimatedIcon";
+import MultiPathAnimatedIcon from "../Animation/AnimatedIcon";
 import { logo } from "@/lib/paths";
 
 export default function Hero() {

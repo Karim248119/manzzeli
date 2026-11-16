@@ -2,12 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import DoorItems from "@/data/doors";
 import Typo from "@/components/Typo";
-import Image from "next/image";
 import { PiCircleHalfTiltLight } from "react-icons/pi";
 import ImgLink from "@/components/ImgLink";
 import { BsQuote } from "react-icons/bs";
-import motion from "framer-motion";
-import AnimatedImg from "@/components/AnimatedImg";
+import AnimatedImg from "@/components/Animation/AnimatedImg";
 
 export default function page() {
   return (

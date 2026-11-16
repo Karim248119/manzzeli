@@ -26,7 +26,7 @@ export default function Palette() {
         // progress: 0 → 1 across the container
         const progress = self.progress;
         // Map progress to number of 50vh sections
-        const newIndex = Math.floor(progress * totalSections * 2);
+        const newIndex = Math.floor(progress * totalSections * 1.5);
         setActiveIndex(newIndex);
       },
     });

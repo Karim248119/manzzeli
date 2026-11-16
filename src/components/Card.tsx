@@ -1,4 +1,4 @@
-import ParallexImg from "./ParallexImg";
+import ParallexImg from "./Animation/ParallexImg";
 import Typo from "./Typo";
 
 const Card = ({

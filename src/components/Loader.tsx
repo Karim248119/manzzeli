@@ -13,7 +13,7 @@ export default function Loader() {
         {[...Array(3)].map((_, index) => (
           <div
             key={index}
-            className="md:w-10 md:h-72 w-5 h-36 bg-white animate-[fadePulse_1.3s_ease-in-out_infinite] "
+            className="md:w-10 md:h-72 w-5 h-36 bg-black animate-[fadePulse_1.3s_ease-in-out_infinite] "
             style={{
               transform: "rotateX(-20deg) rotateY(-15deg)",
               animationDelay: `${index * 0.1}s`,
@@ -21,7 +21,7 @@ export default function Loader() {
           />
         ))}
       </div>
-      <p className="text-white md:text-2xl uppercase font-bold absolute top-[55vh] left-1/2 -translate-x-1/2">
+      <p className="text-black md:text-2xl uppercase font-bold absolute top-[55vh] left-1/2 -translate-x-1/2">
         Loading
       </p>
     </div>

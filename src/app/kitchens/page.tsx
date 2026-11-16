@@ -2,11 +2,10 @@ import Carousel from "@/components/Carousel";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ImgLink from "@/components/ImgLink";
-import ParallexImg from "@/components/ParallexImg";
+import ParallexImg from "@/components/Animation/ParallexImg";
 import ParallexSlider from "@/components/ParallexSlider";
 import Typo from "@/components/Typo";
 import KitchenSlides, { KitchenCarousel } from "@/data/kitchen";
-import React from "react";
 
 export default function page() {
   return (

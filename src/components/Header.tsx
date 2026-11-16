@@ -1,5 +1,5 @@
 import React from "react";
-import ParallexImg from "./ParallexImg";
+import ParallexImg from "./Animation/ParallexImg";
 import Typo from "./Typo";
 import { PiTidalLogoThin } from "react-icons/pi";
 

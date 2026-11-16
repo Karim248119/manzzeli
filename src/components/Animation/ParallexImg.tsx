@@ -3,7 +3,6 @@ import React, { useLayoutEffect, useRef } from "react";
 import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Typo from "./Typo";
 
 gsap.registerPlugin(ScrollTrigger);
 

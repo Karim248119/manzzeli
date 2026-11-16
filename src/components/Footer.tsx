@@ -2,7 +2,7 @@ import React from "react";
 import Typo from "./Typo";
 import { Button } from "./Button";
 import { logo } from "@/lib/paths";
-import MultiPathAnimatedIcon from "./AnimatedIcon";
+import MultiPathAnimatedIcon from "./Animation/AnimatedIcon";
 
 const FooterContent = [
   {
