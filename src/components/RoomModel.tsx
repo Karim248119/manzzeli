@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuRotate3D } from "react-icons/lu";
 import { PiMouseScroll } from "react-icons/pi";
+import Loader from "./Loader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,24 +33,26 @@ function CameraScrollRotation() {
 export default function RoomModel({ file }: { file: string }) {
   const [enableOrbitControls, setEnableOrbitControls] = React.useState(false);
   return (
-    <div
-      className="w-full scroll-area duration-500 relative h-[500vh] "
-      style={{
-        cursor: enableOrbitControls ? "move" : "auto",
-      }}
-    >
-      <button
-        className="absolute bottom-0 right-0 text-4xl bg-black text-white p-2 z-10"
-        onClick={() => setEnableOrbitControls(!enableOrbitControls)}
+    <Suspense fallback={<Loader />}>
+      <div
+        className="w-full scroll-area duration-500 relative h-[500vh] "
+        style={{
+          cursor: enableOrbitControls ? "move" : "auto",
+        }}
       >
-        {enableOrbitControls ? <PiMouseScroll /> : <LuRotate3D />}
-      </button>
-      <div className="w-full h-screen sticky top-0 left-0">
-        <Canvas>
-          <Environment background files={file} />
-          {enableOrbitControls ? <OrbitControls /> : <CameraScrollRotation />}
-        </Canvas>
+        <button
+          className="absolute bottom-0 right-0 text-4xl bg-black text-white p-2 z-10"
+          onClick={() => setEnableOrbitControls(!enableOrbitControls)}
+        >
+          {enableOrbitControls ? <PiMouseScroll /> : <LuRotate3D />}
+        </button>
+        <div className="w-full h-screen sticky top-0 left-0">
+          <Canvas>
+            <Environment background files={file} />
+            {enableOrbitControls ? <OrbitControls /> : <CameraScrollRotation />}
+          </Canvas>
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }

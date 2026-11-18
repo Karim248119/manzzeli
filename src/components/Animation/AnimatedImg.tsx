@@ -49,6 +49,7 @@ export default function AnimatedImg({
       className={className}
       width={1000}
       height={1000}
+      loading="lazy"
     />
   );
 }
