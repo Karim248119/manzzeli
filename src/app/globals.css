@@ -64,3 +64,8 @@ button {
   animation: fadeIn 0.6s ease-out 0.5s forwards;
   /* 0.6s duration, 0.5s delay, forwards keeps it visible after animation */
 }
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 0px;
+}

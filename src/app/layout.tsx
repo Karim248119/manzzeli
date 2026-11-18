@@ -4,6 +4,8 @@ import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
 import Nav from "@/components/Nav";
 import NavTransition from "@/components/NavTransition";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,9 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-white text-black! antialiased`}
       >
-        <LenisProvider />
-        <Nav />
-        <NavTransition>{children}</NavTransition>
+        <Suspense fallback={<Loader />}>
+          <LenisProvider />
+          <Nav />
+          <NavTransition>{children}</NavTransition>
+        </Suspense>
       </body>
     </html>
   );
